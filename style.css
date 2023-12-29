@@ -1,0 +1,160 @@
+/* Add your custom styles here */
+
+body {
+    background-color: #f9f9fa;
+    font-family: 'Roboto', sans-serif; /* Use Roboto font */
+}
+
+.container {
+    max-width: 600px;
+    margin-top: 50px;
+}
+#queryContainer {
+    background-color: #007bff; /* Adjust the color as needed */
+    color: #fff; /* Text color */
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#responseContainer {
+    background-color: #d4edda;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-weight: bold; /* Make the response text bold */
+}
+#responseContainer p {
+    margin-bottom: 10px;
+}
+
+#chatbotForm {
+    margin-bottom: 20px;
+}
+
+/* Add Bootstrap button styles */
+button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Style the input for a cleaner look */
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+/* Optional: Add some spacing to the response text */
+#responseContainer p {
+    margin-bottom: 10px;
+}
+
+/* Add your custom styles from style.css here */
+
+.card-bordered {
+    border: 1px solid #ebebeb;
+}
+
+.card {
+    border: 0;
+    border-radius: 0px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.03);
+    transition: .5s;
+}
+
+.padding {
+    padding: 3rem !important;
+}
+
+.card-header:first-child {
+    border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(77,82,89,0.07);
+}
+
+.card-header .card-title {
+    padding: 0;
+    border: none;
+}
+
+h4.card-title {
+    font-size: 17px;
+}
+
+.card-header>*:last-child {
+    margin-right: 0;
+}
+
+.card-header>* {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.btn-secondary {
+    color: #4d5259 !important;
+    background-color: #e4e7ea;
+    border-color: #e4e7ea;
+    color: #fff;
+}
+
+.btn-xs {
+    font-size: 11px;
+    padding: 2px 8px;
+    line-height: 18px;
+}
+
+.btn-xs:hover {
+    color: #fff !important;
+}
+
+.card-title {
+    font-family: Roboto,sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 0;
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(77,82,89,0.07);
+}
+
+.jumbotron {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.btn {
+    background-color: #007bff; /* Adjust the color as needed */
+    color: #fff; /* Text color */
+}
+.form-group {
+    margin-bottom: 20px;
+}
+
+#userQuery {
+    border-radius: 8px; /* Add rounded corners to the input */
+}
+.form-group label {
+    font-weight: bold; /* Make the labels bold */
+}
+
+/* ... (include other styles as needed) */

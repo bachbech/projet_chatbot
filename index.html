@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tunisia cuisine</title>
+
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Link to the style.css file in the static folder -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Add a background image to the body */
+        body {
+            background-image: url('wallpaper.jpg'); /* Replace with the path to your image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh; /* Ensure full height of the viewport */
+        }
+        .jumbotron {
+            background-color: transparent; /* Remove the grey box background */
+            text-align: center; /* Center-align text */
+            /* Set text color to white */
+            padding: 2rem; /* Add padding for better spacing */
+        }
+        
+    </style>
+</head>
+<body class="container mt-5">
+    <div class="jumbotron">
+        <h1 class="display-4">Tunisian Cuisine</h1>
+       
+    </div>
+
+    <form id="chatbotForm">
+        <div class="form-group">
+            <label for="userQuery">Enter your query:</label>
+            <input type="text" class="form-control" id="userQuery" name="userQuery" required>
+        </div>
+       
+        <button type="button" class="btn btn-primary" onclick="startSpeechRecognition()">
+            <i class="fas fa-microphone"></i> 🎤
+        </button>
+
+        
+
+        <button type="button" class="btn btn-primary" onclick="sendQuery()">Submit</button>
+    </form>
+
+    <div class="mt-4">
+        <h2>Chatbot Response:</h2>
+        <div id="responseContainer" class="alert alert-success mt-3"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function sendQuery() {
+            const userQuery = document.getElementById('userQuery').value;
+
+            fetch('http://127.0.0.1:8000/recette/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ query: userQuery }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('responseContainer').innerHTML = `<p>${data.recette}</p>`;
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>
